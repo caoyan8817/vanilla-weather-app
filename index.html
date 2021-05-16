@@ -15,32 +15,38 @@
   </head>
   <body>
     <div class="container">
-      <h1>Hamburg</h1>
-      <div class="row">
-        <div class="col-6">
-          <ul>
-            <li>Sunday 15:30</li>
-            <li>clear sky</li>
-            <li>Humidity</li>
-            <li>Wind</li>
-          </ul>
-        </div>
-        <div class="col-6">
-          <img
-            src="https://ssl.gstatic.com/onebox/weather/64/rain_light.png"
-            alt=""
-          />
-          14°C | °F
+      <div class="weather-app">
+        <h1>Hamburg</h1>
+        <div class="row">
+          <div class="col-6">
+            <ul>
+              <li>Sunday 15:30</li>
+              <li>clear sky</li>
+              <li>Humidity</li>
+              <li>Wind</li>
+            </ul>
+          </div>
+          <div class="col-6">
+            <img
+              src="https://ssl.gstatic.com/onebox/weather/64/rain_light.png"
+              alt=""
+            />
+            <span class="temp"><strong>14</strong></span>
+            <span class="unit">
+              <span class="cel"><a href="#">°C</a></span> |
+              <span class="fah"><a href="#">°F</a></span>
+            </div>
+        </span>
+          <small>
+            <a
+              href="https://github.com/caoyan8817/vanilla-weather-app"
+              target="_blank"
+              >Open source code</a
+            >
+            by Yan Cao
+          </small>
         </div>
       </div>
-      <small>
-        <a
-          href="https://github.com/caoyan8817/vanilla-weather-app"
-          target="_blank"
-          >Open source code</a
-        >
-        by Yan Cao
-      </small>
     </div>
     <script src="src/app.js"></script>
   </body>
