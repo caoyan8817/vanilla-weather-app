@@ -7,6 +7,7 @@ function showTemp(response) {
   let showCel = document.querySelector("span.temp");
   let showDes = document.querySelector("#weather-description");
   let showWindspeed = document.querySelector("span.wind-speed");
+  celsiusTemp = response.data.main.temp;
   showWindspeed.innerHTML = `${windSpeed} m/s`;
   showHum.innerHTML = `${humNumber} %`;
   showCel.innerHTML = temperature;
@@ -23,6 +24,25 @@ function showCity(event) {
 }
 let formCityName = document.querySelector("#city-form");
 formCityName.addEventListener("submit", showCity);
+
+function showFah(event) {
+  event.preventDefault();
+  let showFah = document.querySelector("span.temp");
+  let fahTemp = (celsiusTemp * 9) / 5 + 32;
+  showFah.innerHTML = Math.round(fahTemp);
+}
+let clickFah = document.querySelector("a.fah");
+clickFah.addEventListener("click", showFah);
+
+function showCel(event) {
+  event.preventDefault();
+  let showCel = document.querySelector("span.temp");
+  showCel.innerHTML = Math.round(celsiusTemp);
+}
+let clickCel = document.querySelector("a.cel");
+clickCel.addEventListener("click", showCel);
+
+let celsiusTemp = null;
 
 let now = new Date();
 let hour = now.getHours();
