@@ -48,3 +48,20 @@ li {
   line-height: 1;
   top: -34px;
 }
+a.cel {
+  color: #212121;
+  cursor: default;
+  text-decoration: none;
+}
+a.cel:hover {
+  text-decoration: none;
+}
+
+a.fah {
+  color: #212121;
+  cursor: default;
+  text-decoration: none;
+}
+a.fah:hover {
+  text-decoration: none;
+}
