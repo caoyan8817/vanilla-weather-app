@@ -23,3 +23,43 @@ function showCity(event) {
 }
 let formCityName = document.querySelector("#city-form");
 formCityName.addEventListener("submit", showCity);
+
+let now = new Date();
+let hour = now.getHours();
+let minute = now.getMinutes();
+let days = [
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
+  "Sunday",
+];
+let day = days[now.getDay()];
+let year = now.getFullYear();
+let date = now.getDate();
+let months = [
+  "Jan",
+  "Feb",
+  "Mar",
+  "Apr",
+  "May",
+  "Jun",
+  "Jul",
+  "Aug",
+  "Sep",
+  "Oct",
+  "Nov",
+  "Dec",
+];
+let month = months[now.getMonth()];
+
+if (minute >= 10) {
+  let realTime = document.querySelector("li.time");
+  realTime.innerHTML = `${year} ${month} ${date} <br />${day}, ${hour} : ${minute}`;
+} else {
+  let realTime = document.querySelector("li.time");
+  realTime.innerHTML = `${year} ${month} ${date} <br /> ${day}, ${hour} : 0${minute}`;
+}
