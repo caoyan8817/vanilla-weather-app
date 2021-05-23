@@ -25,6 +25,25 @@ function showCity(event) {
 let formCityName = document.querySelector("#city-form");
 formCityName.addEventListener("submit", showCity);
 
+function showTempAgain(response) {
+  let tempAgain = Math.round(response.data.main.temp);
+  let showCelAgain = document.querySelector("span.temp");
+  showCelAgain.innerHTML = tempAgain;
+  document.querySelector("h1").innerHTML = response.data.name;
+}
+function showRealPosition(position) {
+  let latitude = position.coords.latitude;
+  let longitude = position.coords.longitude;
+  let apiUrlAgain = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=e45e9e8d6214d5b1940ffacb75074bb9&units=metric`;
+  axios.get(apiUrlAgain).then(showTempAgain);
+}
+function getCurrentLocation(event) {
+  event.preventDefault();
+  navigator.geolocation.getCurrentPosition(showRealPosition);
+}
+let linkClick = document.querySelector("a.current");
+linkClick.addEventListener("click", getCurrentLocation);
+
 function showFah(event) {
   event.preventDefault();
   let showFah = document.querySelector("span.temp");
