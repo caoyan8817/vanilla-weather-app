@@ -11,6 +11,10 @@
       crossorigin="anonymous"
     />
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/ee84e431ef.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="src/style.css" />
     <title>Weathjer App_ Yan</title>
   </head>
@@ -19,20 +23,26 @@
       <div class="weather-app">
         <form id="city-form">
           <div class="row">
-            <div class="col-9">
+            <div class="col-7">
               <input
                 type="text"
+                class="form-control"
                 id="city-name"
                 placeholder="city name"
                 autofocus
               />
             </div>
-            <div class="col-3">
+            <div class="col-2">
               <input type="submit" class="btn-primary" value="Search" />
+            </div>
+            <div class="col-3">
+              <i class="fas fa-map-marked-alt"></i>
+              <a class="current" href="#">Current Location</a>
             </div>
           </div>
         </form>
         <h1 id="appear-city">Hamburg</h1>
+        <i class="fas fa-city"></i>
         <div class="row">
           <div class="col-6">
             <ul>
@@ -60,11 +70,13 @@
           </div>
           <small>
             <br />
+            <i class="fab fa-github"></i>
             <a
               href="https://github.com/caoyan8817/vanilla-weather-app"
               target="_blank"
-              >Open source code</a
-            >
+              class="openSource"
+              >Open source code
+            </a>
             by Yan Cao
           </small>
         </div>
