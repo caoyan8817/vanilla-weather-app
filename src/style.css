@@ -68,17 +68,16 @@ a.fah:hover {
   text-decoration: none;
 }
 
-.btn-primary {
+.btn-purple {
   background: rgb(155, 80, 226);
   border: 1px solid rgb(155, 80, 226);
+  color: white;
 }
-.btn-primary:active {
-  background: rgb(155, 80, 226);
-  border: 1px solid rgb(155, 80, 226);
-}
-.btn-primary:hover {
+
+.btn-purple:hover {
   background: rgb(151, 60, 236);
   border: 1px solid rgb(155, 80, 226);
+  color: white;
 }
 .fa-map-marked-alt {
   color: #d8bbf0;
