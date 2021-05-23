@@ -7,11 +7,17 @@ function showTemp(response) {
   let showCel = document.querySelector("span.temp");
   let showDes = document.querySelector("#weather-description");
   let showWindspeed = document.querySelector("span.wind-speed");
+  let iconElement = document.querySelector("#icon");
   celsiusTemp = response.data.main.temp;
   showWindspeed.innerHTML = `${windSpeed} m/s`;
   showHum.innerHTML = `${humNumber} %`;
   showCel.innerHTML = temperature;
   showDes.innerHTML = weatherDes;
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
 function showCity(event) {
